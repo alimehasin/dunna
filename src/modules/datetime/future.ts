@@ -1,11 +1,11 @@
-import integer from "@/modules/basic/integer";
+import { integer } from "@/modules/basic/integer";
 
 interface FutureConfig {
   minFutureYears?: number;
   maxFutureYears?: number;
 }
 
-export default function future({ minFutureYears = 1, maxFutureYears = 10 }: FutureConfig = {}): Date {
+export function future({ minFutureYears = 1, maxFutureYears = 10 }: FutureConfig = {}): Date {
   const daysInTheFuture = integer({
     min: minFutureYears * 365,
     max: maxFutureYears * 365,

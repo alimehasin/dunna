@@ -1,11 +1,11 @@
-import float from "../basic/float";
+import { float } from "../basic/float";
 
 interface BetweenConfig {
   min: Date;
   max: Date;
 }
 
-export default function future({ min, max }: BetweenConfig): Date {
+export function between({ min, max }: BetweenConfig): Date {
   const minTime = min.getTime();
   const maxTime = max.getTime();
 

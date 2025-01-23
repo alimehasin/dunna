@@ -1,13 +1,5 @@
-import cityName from "./city-name";
-import countryCode from "./country-code";
-import countryName from "./country-name";
-import lat from "./lat";
-import lng from "./lng";
-
-export default {
-  countryName,
-  countryCode,
-  cityName,
-  lng,
-  lat,
-};
+export * from "./city-name";
+export * from "./country-code";
+export * from "./country-name";
+export * from "./lat";
+export * from "./lng";

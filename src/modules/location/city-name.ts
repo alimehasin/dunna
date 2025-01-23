@@ -1,5 +1,5 @@
-import city from "./city";
+import { city } from "./city";
 
-export default function cityName() {
+export function cityName() {
   return city().name;
 }

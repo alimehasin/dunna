@@ -1,4 +1,4 @@
-const lastNames: string[] = [
+export const lastNames: string[] = [
   "Smith",
   "Johnson",
   "Williams",
@@ -10,5 +10,3 @@ const lastNames: string[] = [
   "Rodriguez",
   "Wilson",
 ];
-
-export default lastNames;

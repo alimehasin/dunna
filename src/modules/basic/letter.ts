@@ -1,11 +1,11 @@
 import { letters } from "@/database";
-import integer from "./integer";
+import { integer } from "./integer";
 
 interface LetterConfig {
   casing?: "upper" | "lower" | "any";
 }
 
-export default function letter({ casing = "any" }: LetterConfig = {}) {
+export function letter({ casing = "any" }: LetterConfig = {}) {
   if (casing === "lower") {
     return letters.lower[integer({ max: 26 })];
   }

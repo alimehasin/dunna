@@ -1,6 +1,6 @@
 import { lastNames } from "@/database";
-import choice from "@/modules/basic/choice";
+import { choice } from "@/modules/basic/choice";
 
-export default function lastName(): string {
+export function lastName(): string {
   return choice(lastNames);
 }

@@ -1,6 +1,6 @@
 import { currencies } from "@/database";
-import choice from "@/modules/basic/choice";
+import { choice } from "@/modules/basic/choice";
 
-export default function currency() {
+export function currency() {
   return choice(currencies);
 }

@@ -1,6 +1,6 @@
 import type { Currency } from "@/types";
 
-const currencies: Currency[] = [
+export const currencies: Currency[] = [
   {
     name: "UAE Dirham",
     code: "AED",
@@ -674,5 +674,3 @@ const currencies: Currency[] = [
     code: "ZWL",
   },
 ];
-
-export default currencies;

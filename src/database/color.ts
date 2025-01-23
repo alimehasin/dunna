@@ -1,4 +1,4 @@
-const colors = [
+export const colors = [
   { name: "aliceBlue", hex: "#f0f8ff" },
   { name: "antiqueWhite", hex: "#faebd7" },
   { name: "aqua", hex: "#00ffff" },
@@ -150,5 +150,3 @@ const colors = [
   { name: "yellow", hex: "#ffff00" },
   { name: "yellowGreen", hex: "#9acd32" },
 ];
-
-export default colors;

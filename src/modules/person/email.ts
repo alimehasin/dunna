@@ -1,15 +1,15 @@
-import choice from "@/modules/basic/choice";
-import integer from "@/modules/basic/integer";
+import { choice } from "@/modules/basic/choice";
+import { integer } from "@/modules/basic/integer";
 import type { Gender } from "@/types";
-import firstNameFn from "./first-name";
-import lastNameFn from "./last-name";
+import { firstName as firstNameFn } from "./first-name";
+import { lastName as lastNameFn } from "./last-name";
 
 interface EmailParams {
   domain?: string;
   gender?: Gender | "any";
 }
 
-export default function email({ domain, gender = "any" }: EmailParams = {}) {
+export function email({ domain, gender = "any" }: EmailParams = {}) {
   const firstName = firstNameFn({ gender });
   const lastName = lastNameFn();
 

@@ -1,7 +1,2 @@
-import currencyCode from "./currency-code";
-import currencyName from "./currency-name";
-
-export default {
-  currencyName,
-  currencyCode,
-};
+export * from "./currency-code";
+export * from "./currency-name";

@@ -1,6 +1,6 @@
 import { countries } from "@/database";
-import choice from "@/modules/basic/choice";
+import { choice } from "@/modules/basic/choice";
 
-export default function country() {
+export function country() {
   return choice(countries);
 }

@@ -16,7 +16,7 @@ function limitFractions(num: number, fixed: number): number {
   return Number.parseFloat(`${whole}.${fractions}`);
 }
 
-export default function float({ min = 0, max = 10, fixed = 3 }: FloatConfig = {}): number {
+export function float({ min = 0, max = 10, fixed = 3 }: FloatConfig = {}): number {
   const difference = max - min;
 
   const num = Math.random() * difference + min;

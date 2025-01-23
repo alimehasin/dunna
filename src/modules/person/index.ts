@@ -1,15 +1,6 @@
-import email from "./email";
-import firstName from "./first-name";
-import fullName from "./full-name";
-import gender from "./gender";
-import lastName from "./last-name";
-import person from "./person";
-
-export default {
-  firstName,
-  lastName,
-  fullName,
-  gender,
-  email,
-  person,
-};
+export * from "./email";
+export * from "./first-name";
+export * from "./full-name";
+export * from "./gender";
+export * from "./last-name";
+export * from "./person";

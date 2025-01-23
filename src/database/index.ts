@@ -1,9 +1,7 @@
-import colors from "./color";
-import countries from "./countries";
-import currencies from "./currencies";
-import femaleFirstNames from "./female-first-names";
-import lastNames from "./last-names";
-import letters from "./letters";
-import maleFirstNames from "./male-first-names";
-
-export { countries, currencies, maleFirstNames, femaleFirstNames, lastNames, letters, colors };
+export * from "./color";
+export * from "./countries";
+export * from "./currencies";
+export * from "./female-first-names";
+export * from "./last-names";
+export * from "./letters";
+export * from "./male-first-names";

@@ -1,5 +1,5 @@
-import country from "./country";
+import { country } from "./country";
 
-export default function countryCode() {
+export function countryCode() {
   return country().ISO2;
 }
