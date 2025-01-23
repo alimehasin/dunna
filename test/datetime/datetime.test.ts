@@ -28,4 +28,13 @@ describe("Test dunna datetime module", () => {
       expect(near.getTime()).toBeGreaterThan(now.getTime());
     }
   });
+
+  test("return a valid birthdate", () => {
+    for (let i = 0; i < 100; i++) {
+      const birthdate = dunna.datetime.birthdate();
+
+      expect(birthdate.getTime()).toBeGreaterThan(new Date(1900, 0, 1).getTime());
+      expect(birthdate.getTime()).toBeLessThan(new Date(2025, 0, 1).getTime());
+    }
+  });
 });
