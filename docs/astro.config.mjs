@@ -6,9 +6,13 @@ export default defineConfig({
     starlight({
       title: "Dunna",
       customCss: ["./src/styles/globals.css"],
-      social: {
-        github: "https://github.com/omnia-sh/dunna",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/alimehasin/dunna",
+        },
+      ],
 
       expressiveCode: {
         styleOverrides: { borderRadius: "0.25rem" },
