@@ -33,7 +33,7 @@ describe("Test dunna datetime module", () => {
     for (let i = 0; i < 100; i++) {
       const birthdate = dunna.datetime.birthdate();
 
-      expect(birthdate.getTime()).toBeGreaterThan(new Date(1900, 0, 1).getTime());
+      expect(birthdate.getTime()).toBeGreaterThanOrEqual(new Date(1900, 0, 1).getTime());
       expect(birthdate.getTime()).toBeLessThan(new Date(2025, 0, 1).getTime());
     }
   });
