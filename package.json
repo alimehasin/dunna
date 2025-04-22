@@ -8,11 +8,11 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
-  "packageManager": "bun@1.2.1",
+  "packageManager": "bun@1.2.10",
   "keywords": ["random", "fake", "data", "typescript"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omnia-sh/dunna.git"
+    "url": "git+https://github.com/alimehasin/dunna.git"
   },
   "scripts": {
     "build": "tsup",
@@ -29,16 +29,16 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@size-limit/preset-small-lib": "^11.1.6",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@size-limit/preset-small-lib": "^11.2.0",
     "@types/bun": "latest",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "release-it": "^18.1.2",
-    "size-limit": "^11.1.6",
-    "tsup": "^8.3.6",
-    "typescript": "^5.7.3"
+    "lint-staged": "^15.5.1",
+    "release-it": "^19.0.1",
+    "size-limit": "^11.2.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "size-limit": [
     {
