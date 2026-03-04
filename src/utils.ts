@@ -1,7 +1,7 @@
-import type { RGB } from "./types";
+import type { RGB } from './types';
 
 export function hexToRgb(hex: string): RGB {
-  const bigint = Number.parseInt(hex.replace("#", ""), 16);
+  const bigint = Number.parseInt(hex.replace('#', ''), 16);
 
   return {
     red: (bigint >> 16) & 255,

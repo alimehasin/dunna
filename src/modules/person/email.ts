@@ -1,19 +1,25 @@
-import { choice } from "@/modules/basic/choice";
-import { integer } from "@/modules/basic/integer";
-import type { Gender } from "@/types";
-import { firstName as firstNameFn } from "./first-name";
-import { lastName as lastNameFn } from "./last-name";
+import { choice } from '@/modules/basic/choice';
+import { integer } from '@/modules/basic/integer';
+import type { Gender } from '@/types';
+import { firstName as firstNameFn } from './first-name';
+import { lastName as lastNameFn } from './last-name';
 
 interface EmailParams {
   domain?: string;
-  gender?: Gender | "any";
+  gender?: Gender | 'any';
 }
 
-export function email({ domain, gender = "any" }: EmailParams = {}) {
+export function email({ domain, gender = 'any' }: EmailParams = {}) {
   const firstName = firstNameFn({ gender });
   const lastName = lastNameFn();
 
-  const domains = ["gmail.com", "hotmail.com", "yahoo.com", "outlook.com", "example.com"];
+  const domains = [
+    'gmail.com',
+    'hotmail.com',
+    'yahoo.com',
+    'outlook.com',
+    'example.com',
+  ];
   const chosenDomain = domain || choice(domains);
 
   const firstPart = `${firstName.toLowerCase()}.${lastName.toLowerCase()}`;

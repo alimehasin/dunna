@@ -1,3 +1,3 @@
-import dunna from "./modules";
+import dunna from './modules';
 
 export { dunna };

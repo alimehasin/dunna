@@ -1,17 +1,17 @@
-import { femaleFirstNames, maleFirstNames } from "@/database";
-import { choice } from "@/modules/basic/choice";
-import type { Gender } from "@/types";
+import { femaleFirstNames, maleFirstNames } from '@/database';
+import { choice } from '@/modules/basic/choice';
+import type { Gender } from '@/types';
 
 interface FirstNameParams {
-  gender?: Gender | "any";
+  gender?: Gender | 'any';
 }
 
-export function firstName({ gender = "any" }: FirstNameParams = {}): string {
-  if (gender === "male") {
+export function firstName({ gender = 'any' }: FirstNameParams = {}): string {
+  if (gender === 'male') {
     return choice(maleFirstNames);
   }
 
-  if (gender === "female") {
+  if (gender === 'female') {
     return choice(femaleFirstNames);
   }
 

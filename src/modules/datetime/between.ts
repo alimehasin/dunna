@@ -1,4 +1,4 @@
-import { float } from "../basic/float";
+import { float } from '../basic/float';
 
 interface BetweenConfig {
   min: Date;
@@ -9,7 +9,8 @@ export function between({ min, max }: BetweenConfig): Date {
   const minTime = min.getTime();
   const maxTime = max.getTime();
 
-  const randomTime = float({ min: 0, max: 1, fixed: 2 }) * (maxTime - minTime) + minTime;
+  const randomTime =
+    float({ min: 0, max: 1, fixed: 2 }) * (maxTime - minTime) + minTime;
 
   return new Date(randomTime);
 }

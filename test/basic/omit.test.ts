@@ -1,8 +1,8 @@
-import { describe, expect, test } from "bun:test";
-import { dunna } from "@";
+import { describe, expect, test } from 'bun:test';
+import { dunna } from '@';
 
-describe("Test dunna.basic.omit() function", () => {
-  test("check if count elements are deleted from the array", () => {
+describe('Test dunna.basic.omit() function', () => {
+  test('check if count elements are deleted from the array', () => {
     for (let i = 0; i < 100; i++) {
       const nums = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -14,15 +14,15 @@ describe("Test dunna.basic.omit() function", () => {
     }
   });
 
-  test("throw error when count is less than 0", () => {
+  test('throw error when count is less than 0', () => {
     expect(() => dunna.basic.omit(-1, [1, 2, 3])).toThrowError();
   });
 
-  test("throw error when count is bigger than the array length", () => {
+  test('throw error when count is bigger than the array length', () => {
     expect(() => dunna.basic.omit(10, [1, 2, 3])).toThrowError();
   });
 
-  test("throw error when count type is float", () => {
+  test('throw error when count type is float', () => {
     expect(() => dunna.basic.omit(5.2, [1, 2, 3])).toThrowError();
   });
 });

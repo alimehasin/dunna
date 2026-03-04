@@ -1,4 +1,4 @@
-import { currency } from "./currency";
+import { currency } from './currency';
 
 export function currencyName() {
   return currency().name;

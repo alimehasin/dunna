@@ -1,14 +1,14 @@
-import { describe, expect, test } from "bun:test";
-import { dunna } from "@";
+import { describe, expect, test } from 'bun:test';
+import { dunna } from '@';
 
-describe("Test dunna.basic.float() function", () => {
-  test("generate a random float number", () => {
+describe('Test dunna.basic.float() function', () => {
+  test('generate a random float number', () => {
     const number = dunna.basic.float();
 
     expect(Number.parseFloat(number.toString())).toEqual(number);
   });
 
-  test("generate a random float number without params", () => {
+  test('generate a random float number without params', () => {
     for (let i = 0; i < 1000; i++) {
       const number = dunna.basic.float();
 
@@ -17,17 +17,17 @@ describe("Test dunna.basic.float() function", () => {
     }
   });
 
-  test("generate a random float number with `fixed` number of decimal points", () => {
+  test('generate a random float number with `fixed` number of decimal points', () => {
     for (let i = 1; i <= 5; i++) {
       const fixed = i;
 
-      const number = dunna.basic.float({ fixed }).toString().split(".");
+      const number = dunna.basic.float({ fixed }).toString().split('.');
 
       expect(number[1].length).toBeLessThanOrEqual(fixed);
     }
   });
 
-  test("generate a random float with specified min", () => {
+  test('generate a random float with specified min', () => {
     for (let i = 0; i < 1000; i++) {
       const number = dunna.basic.float({ min: 5.5 });
 
@@ -36,7 +36,7 @@ describe("Test dunna.basic.float() function", () => {
     }
   });
 
-  test("generate a random float with specified max", () => {
+  test('generate a random float with specified max', () => {
     for (let i = 0; i < 1000; i++) {
       const number = dunna.basic.float({ max: 50.4 });
 
@@ -45,7 +45,7 @@ describe("Test dunna.basic.float() function", () => {
     }
   });
 
-  test("generate a random float with specified min and max", () => {
+  test('generate a random float with specified min and max', () => {
     for (let i = 0; i < 1000; i++) {
       const number = dunna.basic.float({ min: 5, max: 50.7 });
 

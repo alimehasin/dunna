@@ -1,11 +1,14 @@
-import { integer } from "@/modules/basic/integer";
+import { integer } from '@/modules/basic/integer';
 
 interface NearConfig {
   minFutureDays?: number;
   maxFutureDays?: number;
 }
 
-export function near({ minFutureDays = 1, maxFutureDays = 10 }: NearConfig = {}): Date {
+export function near({
+  minFutureDays = 1,
+  maxFutureDays = 10,
+}: NearConfig = {}): Date {
   const daysInTheNear = integer({
     min: minFutureDays,
     max: maxFutureDays,
