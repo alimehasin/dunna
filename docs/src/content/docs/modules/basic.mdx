@@ -12,19 +12,19 @@ This is a basic module, it contains integer, float, string, boolean, and date ty
 `dunna.basic.boolean()` returns a random boolean value.
 
 ```ts
-// Use default likelihood = 50
+// Use default probability = 0.5 (50% chance of true)
 dunna.basic.boolean(); // true
 dunna.basic.boolean(); // false
 dunna.basic.boolean(); // false
 
-// Modify likelihood
-dunna.basic.boolean({ likelihood: 80 }); // The output has chance of 80% to be true
-dunna.basic.boolean({ likelihood: 20 }); // The output has chance of 20% to be true
+// Modify probability (value between 0 and 1)
+dunna.basic.boolean({ probability: 0.8 }); // 80% chance of true
+dunna.basic.boolean({ probability: 0.2 }); // 20% chance of true
 ```
 
-| Parameter  | Type   | Description                             | Default |
-| ---------- | ------ | --------------------------------------- | ------- |
-| likelihood | number | The likelihood of the output being true | 50      |
+| Parameter   | Type   | Description               | Default |
+| ----------- | ------ | ------------------------- | ------- |
+| probability | number | Probability of true (0–1) | 0.5     |
 
 ## Integer
 

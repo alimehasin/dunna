@@ -1,13 +1,13 @@
 import { float } from './float';
 
 interface BooleanConfig {
-  likelihood?: number;
+  probability?: number;
 }
 
-export function boolean({ likelihood = 50 }: BooleanConfig = {}): boolean {
-  if (likelihood < 0 || likelihood > 100) {
-    throw new Error('likliehood should be >= 0 and <= 100');
+export function boolean({ probability = 0.5 }: BooleanConfig = {}): boolean {
+  if (probability < 0 || probability > 1) {
+    throw new Error('probability should be >= 0 and <= 1');
   }
 
-  return float({ max: 100 }) < likelihood;
+  return float({ min: 0, max: 1 }) < probability;
 }
