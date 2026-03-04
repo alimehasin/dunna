@@ -79,26 +79,26 @@ dunna.basic.letter({ casing: "upper" });
 | --------- | ------ | ------------------------------------------------- | ------- |
 | casing    | string | The casing of the output letter (upper/lower/any) | "any"   |
 
-## Choice
+## Pick One
 
-`dunna.basic.choice(array)` returns a random element from an array
+`dunna.basic.pickOne(array)` returns a random element from an array
 
 ```ts
-dunna.basic.choice(["Alice", "Bob", "Charlie"]); // Alice
-dunna.basic.choice(["Alice", "Bob", "Charlie"]); // Charlie
+dunna.basic.pickOne(["Alice", "Bob", "Charlie"]); // Alice
+dunna.basic.pickOne(["Alice", "Bob", "Charlie"]); // Charlie
 ```
 
 | Parameter | Type | Description                       | Default |
 | --------- | ---- | --------------------------------- | ------- |
 | array     | T[]  | The array to be randomly selected | null    |
 
-## Pick
+## Pick Many
 
-`dunna.basic.pick(count, array)` returns a random subset of the given array with the given count
+`dunna.basic.pickMany(count, array)` returns a random subset of the given array with the given count
 
 ```ts
-dunna.basic.pick(3, [2, 1, 6, 3, 4]); // [6, 4, 1]
-dunna.basic.pick(2, ["Alice", "Bob", "Charlie"]); // ['Bob', 'Charlie']
+dunna.basic.pickMany(3, [2, 1, 6, 3, 4]); // [6, 4, 1]
+dunna.basic.pickMany(2, ["Alice", "Bob", "Charlie"]); // ['Bob', 'Charlie']
 ```
 
 | Parameter | Type   | Description                         | Default |

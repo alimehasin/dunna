@@ -1,6 +1,6 @@
 import { lastNames } from '@/database';
-import { choice } from '@/modules/basic/choice';
+import { pickOne } from '@/modules/basic/pick-one';
 
 export function lastName(): string {
-  return choice(lastNames);
+  return pickOne(lastNames);
 }

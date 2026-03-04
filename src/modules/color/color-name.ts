@@ -1,6 +1,6 @@
 import { colors } from '@/database/color';
-import { choice } from '@/modules/basic/choice';
+import { pickOne } from '@/modules/basic/pick-one';
 
 export function colorName() {
-  return choice(colors).name;
+  return pickOne(colors).name;
 }

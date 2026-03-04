@@ -1,5 +1,5 @@
-import { choice } from '@/modules/basic/choice';
 import { integer } from '@/modules/basic/integer';
+import { pickOne } from '@/modules/basic/pick-one';
 import type { Gender } from '@/types';
 import { firstName as firstNameFn } from './first-name';
 import { lastName as lastNameFn } from './last-name';
@@ -20,7 +20,7 @@ export function email({ domain, gender = 'any' }: EmailParams = {}) {
     'outlook.com',
     'example.com',
   ];
-  const chosenDomain = domain || choice(domains);
+  const chosenDomain = domain || pickOne(domains);
 
   const firstPart = `${firstName.toLowerCase()}.${lastName.toLowerCase()}`;
   const secondPart = integer({ min: 1000, max: 9999 });

@@ -1,10 +1,10 @@
 import { colors } from '@/database/color';
-import { choice } from '@/modules/basic/choice';
+import { pickOne } from '@/modules/basic/pick-one';
 import type { Color } from '@/types';
 import { hexToRgb } from '@/utils';
 
 export function color(): Color {
-  const color = choice(colors);
+  const color = pickOne(colors);
 
   return { ...color, rgb: hexToRgb(color.hex) };
 }

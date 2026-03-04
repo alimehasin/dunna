@@ -1,6 +1,6 @@
 import { countries } from '@/database';
-import { choice } from '@/modules/basic/choice';
+import { pickOne } from '@/modules/basic/pick-one';
 
 export function country() {
-  return choice(countries);
+  return pickOne(countries);
 }

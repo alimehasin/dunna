@@ -1,5 +1,5 @@
-import { pick } from './pick';
+import { pickMany } from './pick-many';
 
 export function omit<T>(count: number, array: T[]): T[] {
-  return pick(array.length - count, array);
+  return pickMany(array.length - count, array);
 }

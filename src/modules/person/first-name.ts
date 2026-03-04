@@ -1,5 +1,5 @@
 import { femaleFirstNames, maleFirstNames } from '@/database';
-import { choice } from '@/modules/basic/choice';
+import { pickOne } from '@/modules/basic/pick-one';
 import type { Gender } from '@/types';
 
 interface FirstNameParams {
@@ -8,12 +8,12 @@ interface FirstNameParams {
 
 export function firstName({ gender = 'any' }: FirstNameParams = {}): string {
   if (gender === 'male') {
-    return choice(maleFirstNames);
+    return pickOne(maleFirstNames);
   }
 
   if (gender === 'female') {
-    return choice(femaleFirstNames);
+    return pickOne(femaleFirstNames);
   }
 
-  return choice(choice([maleFirstNames, femaleFirstNames]));
+  return pickOne(pickOne([maleFirstNames, femaleFirstNames]));
 }

@@ -1,6 +1,6 @@
-import { choice } from '@/modules/basic/choice';
+import { pickOne } from '@/modules/basic/pick-one';
 import { country } from './country';
 
 export function city() {
-  return choice(country().cities);
+  return pickOne(country().cities);
 }
