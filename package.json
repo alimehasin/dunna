@@ -22,7 +22,11 @@
     "url": "git+https://github.com/alimehasin/dunna.git"
   },
   "scripts": {
-    "build": "rm -rf dist && bun build src/index.ts --outfile=dist/index.js --format=esm --sourcemap=inline && bun build src/index.ts --outfile=dist/index.cjs --format=cjs --sourcemap=inline && tsc -p tsconfig.build.json",
+    "build": "bun run build:clean && bun run build:esm && bun run build:cjs && bun run build:types",
+    "build:clean": "rm -rf dist",
+    "build:esm": "bun build ./src/index.ts --outdir dist --format esm --target node --sourcemap=linked --entry-naming=[dir]/[name].mjs",
+    "build:cjs": "bun build ./src/index.ts --outdir dist --format cjs --target node --sourcemap=linked --entry-naming=[dir]/[name].cjs",
+    "build:types": "tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.mts && mv dist/index.d.ts dist/index.d.cts",
     "format": "biome format --write",
     "lint": "biome lint --write",
     "check": "biome check --write",
