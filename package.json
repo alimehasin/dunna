@@ -7,7 +7,7 @@
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -25,7 +25,7 @@
     "build:clean": "rm -rf dist",
     "build:esm": "bun build ./src/index.ts --outdir dist --format esm --target node --sourcemap=linked --entry-naming=[dir]/[name].mjs",
     "build:cjs": "bun build ./src/index.ts --outdir dist --format cjs --target node --sourcemap=linked --entry-naming=[dir]/[name].cjs",
-    "build:types": "tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.mts && mv dist/index.d.ts dist/index.d.cts",
+    "build:types": "tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.mts && cp dist/index.d.ts dist/index.d.cts",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
