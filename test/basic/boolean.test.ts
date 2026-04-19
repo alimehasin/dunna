@@ -1,5 +1,4 @@
 import { describe, expect, test } from 'bun:test';
-
 import { dunna } from '@';
 
 describe('Test dunna.basic.boolean() function', () => {

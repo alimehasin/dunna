@@ -9,8 +9,8 @@ function limitFractions(num: number, fixed: number): number {
     throw new Error('Receive a number without fractions');
   }
 
-  const [whole, _faractions] = num.toString().split('.');
-  const fractions = _faractions.substring(0, fixed);
+  const [whole, _fractions = ''] = num.toString().split('.');
+  const fractions = _fractions.slice(0, fixed);
 
   return Number.parseFloat(`${whole}.${fractions}`);
 }

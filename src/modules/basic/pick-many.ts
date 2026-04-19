@@ -10,7 +10,7 @@ export function pickMany<T>(count: number, array: T[]): T[] {
   }
 
   if (!Number.isInteger(count)) {
-    throw new Error('Count should be integer');
+    throw new TypeError('Count should be integer');
   }
 
   const picks: T[] = [];

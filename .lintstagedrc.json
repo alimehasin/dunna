@@ -1,3 +1,4 @@
 {
-  "*.{js,jsx,ts,tsx,json,css,scss,md}": ["bun run check"]
+  "*.{js,jsx,ts,tsx,json,css,scss}": ["bun run fmt"],
+  "*.{js,jsx,ts,tsx}": ["bun run lint"]
 }

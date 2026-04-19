@@ -1,3 +1,5 @@
+// oxlint-disable max-lines
+
 import type { Country } from '@/types';
 
 export const countries: Country[] = [
