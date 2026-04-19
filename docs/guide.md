@@ -6,10 +6,6 @@ outline: deep
 
 Dunna generates random values for tests, seed data, and quick prototypes. The public API is a single object with grouped helpers.
 
-::: warning Work in progress
-The package is under active development. APIs may change between releases.
-:::
-
 ## Install
 
 Use your preferred package manager:

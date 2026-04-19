@@ -2,8 +2,6 @@
 
 Random data for tests and prototypes. Dunna is a TypeScript library with small, namespaced helpers for booleans, numbers, names, places, dates, money, and colors.
 
-> **Note:** The package is under active development. APIs may change between releases.
-
 ## Get started
 
 ### Installation
