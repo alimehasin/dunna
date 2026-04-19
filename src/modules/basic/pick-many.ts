@@ -21,7 +21,7 @@ export function pickMany<T>(count: number, array: T[]): T[] {
 
     if (!indicies.has(index)) {
       indicies.add(index);
-      picks.push(array[index]);
+      picks.push(array[index]!);
     }
   }
 
